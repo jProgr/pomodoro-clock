@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8"> 
         <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="jquery-3.1.1.js"></script>
+        <script src="pomodoro.js"></script>
     </head>
 <body>
     <div id="main_clock">25:00</div>
     <div id="settings">
-        <ul><li>-</li><li id="break_time">5</li><li>+</li></ul>
-        <ul><li>-</li><li id="session_time">25</li><li>+</li></ul>
+        <div><button id="substract_break">-</button><p id="break_time">5</p><button id="add_break">+</button></div>
+        <div><button id="substract_session">-</button><p id="session_time">25</p><button id="add_session">+</button></div>
     </div>
 </body>
 </html>
