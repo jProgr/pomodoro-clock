@@ -27,8 +27,8 @@ function update()
     if (clock.current_timer > 0 && clock.ticking) { clock.current_timer--; }
     
     // Toggles between Session timer and Break timer
-    if (clock.current_timer <= 0 && !clock.inSession) { clock.current_timer = clock.break_time; clock.inSession = true; }
-    else if (clock.current_timer <= 0 && clock.inSession) { clock.current_timer = clock.session_time; clock.inSession = false; }
+    if (clock.current_timer <= 0 && !clock.inSession) { clock.current_timer = clock.session_time; clock.inSession = true; }
+    else if (clock.current_timer <= 0 && clock.inSession) { clock.current_timer = clock.break_time; clock.inSession = false; }
 }
 
 //
