@@ -1,4 +1,41 @@
-ul
+/* Colors
+Background: #A5B1B8
+letters: #2F3435
+
+Modificate in pomodoro.js
+Session: #5BBFB9;
+Break: #D9298A
+*/
+
+body
 {
-    list-style: none;
+    background-color: #A5B1B8;
+    color: #2F3435;
+    font: 3em monospace;
+}
+
+#main
+{
+    margin: 10% auto;
+    text-align: center;
+}
+
+button
+{
+    background-color: transparent;
+    border-style: none;
+    color: #2F3435;
+    font: 1em monospace;
+}
+
+p { display: inline; }
+
+#settings div { display: inline; }
+
+/* border-bottom color will be modified in pomodoro.js */
+#timer
+{
+    border-bottom: medium solid #5BBFB9;
+    font: 3em monospace;
+    margin-bottom: .2em;
 }
