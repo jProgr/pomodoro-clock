@@ -11,7 +11,7 @@ body
 {
     background-color: #A5B1B8;
     color: #2F3435;
-    font: 3em monospace;
+    font: 3em 'Source Code Pro', monospace;
 }
 
 #main
@@ -25,7 +25,7 @@ button
     background-color: transparent;
     border-style: none;
     color: #2F3435;
-    font: 1em monospace;
+    font: 1em 'Source Code Pro', monospace;
 }
 
 p { display: inline; }
@@ -36,6 +36,6 @@ p { display: inline; }
 #timer
 {
     border-bottom: medium solid #5BBFB9;
-    font: 3em monospace;
+    font-size: 3em;
     margin-bottom: .2em;
 }
