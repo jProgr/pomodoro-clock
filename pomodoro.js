@@ -10,11 +10,16 @@ var clock =
     current_timer: 1500,
     inSession: true,
     ticking: false,
-    substract_break: function() { this.break_time -= (this.break_time <= 60) ? 0 : 60; },
-    add_break: function() { this.break_time += 60; },
-    substract_session: function() { this.session_time -= (this.session_time <= 60) ? 0 : 60; },
-    add_session: function() { this.session_time += 60; },
-    toggle: function() { this.ticking = !this.ticking; }
+    substract_break: function() { this.break_time -= (this.break_time <= 60) ? 0 : 60; this.update_timers(); },
+    add_break: function() { this.break_time += 60; this.update_timers(); },
+    substract_session: function() { this.session_time -= (this.session_time <= 60) ? 0 : 60; this.update_timers(); },
+    add_session: function() { this.session_time += 60; this.update_timers(); },
+    toggle: function() { this.ticking = !this.ticking; },
+    update_timers: function()
+    {
+        if (!this.ticking)
+        { this.current_timer = (this.inSession) ? this.session_time : this.break_time; }
+    }
 };
 
 function update()
