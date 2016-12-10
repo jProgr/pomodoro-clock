@@ -46,6 +46,12 @@ function update_main_clock()
     $("#timer").text(s_to_m(clock.current_timer));
 }
 
+// Updates color of session to indicate if break or in session
+// Session: #5BBFB9
+// Break: #D9298A
+function update_session_color()
+{ $("#timer").css("border-bottom-color", (clock.inSession) ? "#5BBFB9" : "#D9298A"); }
+
 // Converts seconds to string in the form of "mm:ss"
 function s_to_m(seconds)
 {   
@@ -60,7 +66,7 @@ function s_to_m(seconds)
 // Converts full minutes in seconds to minutes: 180 -> 3
 function full_seconds_to_minutes_int(seconds) { return ~~(seconds / 60) + ""; }
 
-setInterval(() => { update(); update_main_clock(); }, 1000);
+setInterval(() => { update(); update_main_clock(); update_session_color(); }, 1000);
 
 $(document).ready(function()
 {
